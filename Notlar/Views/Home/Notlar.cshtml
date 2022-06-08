@@ -1,0 +1,16 @@
+﻿<div class="text-center">
+    <h1 style="color:#0a58ca">Notlar</h1>
+</div>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-12 mt-1 mb-1">
+        <div class="card">
+            <div class="card-body">@item.NotIcerik</div>
+            <div class="card-footer"><a class="btn btn-outline-danger" asp-route-id="@item.NotId" asp-action="DeleteNot">Sil</a></div>
+        </div>
+    </div>
+    }
+</div>
